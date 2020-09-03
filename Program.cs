@@ -32,6 +32,26 @@ namespace ShootingDice
 
             Console.WriteLine("-------------------");
 
+            SoreLoserPlayer player5 = new SoreLoserPlayer();
+            player5.Name = "Sore Loser Player";
+
+            player5.Play(player4);
+
+            Console.WriteLine("-------------------");
+
+            UpperHalfPlayer player6 = new UpperHalfPlayer();
+            player6.Name = "Upper Half Player";
+
+            player6.Play(player5);
+
+            Console.WriteLine("-------------------");
+            SoreLoserUpperHalfPlayer player7 = new SoreLoserUpperHalfPlayer();
+            player7.Name = "Sore Loser Upper Half Player";
+
+            player7.Play(player6);
+
+            Console.WriteLine("-------------------");
+
             Player large = new LargeDicePlayer();
             large.Name = "Bigun Rollsalot";
 
@@ -45,6 +65,9 @@ namespace ShootingDice
                 player2,
                 player3,
                 player4,
+                player5,
+                player6,
+                player7,
                 large
             };
 

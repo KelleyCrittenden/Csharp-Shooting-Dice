@@ -7,7 +7,7 @@ namespace ShootingDice
     // A Player who shouts a taunt every time they roll dice
     public class SmackTalkingPlayer : Player
     {
-        public string Taunt { get; } = ("Out of my sight! Thou dost infect my eyes");
+        public string Taunt { get; } = "Out of my sight! Thou dost infect my eyes";
 
         public override int Roll()
         {;
