@@ -6,7 +6,7 @@ namespace ShootingDice
     // A SmackTalkingPlayer who randomly selects a taunt from a list to say to the other player
     public class CreativeSmackTalkingPlayer : Player
     {
-        public List<string> SmackTalkList = new List<string>()
+        private List<string> SmackTalkList = new List<string>()
         {
             "Thou forward unwash'd flirt-gill!",
             "So, so, thou common dog, didst thou disgorge thy glutton bosom.",
