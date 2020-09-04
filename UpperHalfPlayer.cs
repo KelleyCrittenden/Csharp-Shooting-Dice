@@ -9,7 +9,7 @@ namespace ShootingDice
     {
         public override int Roll()
         {
-            // Return a random number between 1 and DiceSize
+            // Return a number with a minimum of 4 so that the players roll is never below that
             return new Random().Next(4, DiceSize) + 1;
         }
     }

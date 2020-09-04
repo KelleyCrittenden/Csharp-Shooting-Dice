@@ -8,12 +8,13 @@ namespace ShootingDice
     //  who throws an exception when they lose to the other player
     public class SoreLoserUpperHalfPlayer : Player
     {
+        // overriding Roll so that the player never rolls anything under 4
         public override int Roll()
         {
             // Return a random number between 1 and DiceSize
             return new Random().Next(4, DiceSize) + 1;
         }
-
+        // over riding Play so that the player throws an exception if they lose
         public override void Play(Player other)
         {
             // Call roll for "this" object and for the "other" object
@@ -28,15 +29,8 @@ namespace ShootingDice
             }
             else if (myRoll < otherRoll)
             {
-                // Console.WriteLine($"{other.Name} Wins!");
-                try
-                {
-                    throw new Exception($"{Name} yells - You cheated!");
-                }
-                catch
-                {
-                    Console.WriteLine($"{Name} yells - You cheated!");
-                }
+                // throwing an exception if they player loses
+                throw new Exception($"{Name} yells - You cheated!");
 
             }
             else

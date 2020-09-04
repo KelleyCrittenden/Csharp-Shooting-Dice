@@ -6,6 +6,7 @@ namespace ShootingDice
     // A SmackTalkingPlayer who randomly selects a taunt from a list to say to the other player
     public class CreativeSmackTalkingPlayer : Player
     {
+        // creating a list of taunts
         private List<string> SmackTalkList = new List<string>()
         {
             "Thou forward unwash'd flirt-gill!",
@@ -19,7 +20,7 @@ namespace ShootingDice
 
         public override int Roll()
         {
-
+            // grabbing a random taunt from the list
             int randomTaunt = new Random().Next(SmackTalkList.Count);
             string random = SmackTalkList[randomTaunt];
             Console.WriteLine($"{Name} yells - {random}");
