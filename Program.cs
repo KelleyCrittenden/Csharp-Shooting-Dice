@@ -8,6 +8,7 @@ namespace ShootingDice
     {
         static void Main(string[] args)
         {
+            // instantiating new players
             SmackTalkingPlayer player1 = new SmackTalkingPlayer();
             player1.Name = "Smack Talker";
 
@@ -34,8 +35,15 @@ namespace ShootingDice
 
             SoreLoserPlayer player5 = new SoreLoserPlayer();
             player5.Name = "Sore Loser Player";
-
-            player5.Play(player4);
+            // catching the exception
+            try
+            {
+                player5.Play(player4);
+            }
+            catch
+            {
+                Console.WriteLine($"You cheated!");
+            }
 
             Console.WriteLine("-------------------");
 
@@ -47,8 +55,16 @@ namespace ShootingDice
             Console.WriteLine("-------------------");
             SoreLoserUpperHalfPlayer player7 = new SoreLoserUpperHalfPlayer();
             player7.Name = "Sore Loser Upper Half Player";
+            // catching the exception
+            try
+            {
 
-            player7.Play(player6);
+                player7.Play(player6);
+            }
+            catch
+            {
+                Console.WriteLine($"You cheated!");
+            }
 
             Console.WriteLine("-------------------");
 
@@ -59,6 +75,7 @@ namespace ShootingDice
 
             Console.WriteLine("-------------------");
 
+            // creating a list of players
             List<Player> players = new List<Player>()
             {
                 player1,
@@ -100,7 +117,16 @@ namespace ShootingDice
                 // Make adjacent players play noe another
                 Player player1 = shuffledPlayers[i];
                 Player player2 = shuffledPlayers[i + 1];
-                player1.Play(player2);
+
+                // adding catch just incase any exceptions happen
+                try
+                {
+                    player1.Play(player2);
+                }
+                catch
+                {
+                    Console.WriteLine($"You cheated!");
+                }
             }
         }
     }

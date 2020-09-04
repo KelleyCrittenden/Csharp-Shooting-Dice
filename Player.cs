@@ -1,3 +1,5 @@
+// Parent/Base Class for Player, storing all of the shared/redundant properties of a player
+
 using System;
 
 namespace ShootingDice

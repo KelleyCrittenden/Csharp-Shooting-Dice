@@ -22,15 +22,8 @@ namespace ShootingDice
             }
             else if (myRoll < otherRoll)
             {
-                // Console.WriteLine($"{other.Name} Wins!");
-                try
-                {
-                    throw new Exception($"{Name} yells - You cheated!");
-                }
-                catch
-                {
-                    Console.WriteLine($"{Name} yells - You cheated!");
-                }
+                // throwing an exception if they player loses
+                throw new Exception($"{Name} yells - You cheated!");
 
             }
             else

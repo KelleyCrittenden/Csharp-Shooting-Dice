@@ -12,7 +12,7 @@ namespace ShootingDice
         public override int Roll()
         {;
             Console.WriteLine($"{Name} yells - {Taunt}");
-            // Return a random number between 1 and DiceSize
+            // Return a random number between 1 and Dice Size
             return new Random().Next(DiceSize) + 1;
         }
 
